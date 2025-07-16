@@ -1,0 +1,87 @@
+@charset "utf-8";
+/*共通設定*/
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+img {
+  width: 100%;
+  display: 100%; 
+}
+.content-wrapper{
+  position: absolute;
+  bottom: 1%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* blackとボタン群の間隔 */
+}
+#second{
+  background-image: url("photo/DSC00179.jpg"); /* ←画像パスに差し替え */
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.black{
+  justify-content: center;
+  background-color:rgba(0,0,0,0.5);
+  padding: 20px;
+  max-width: 400%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.instagram img, .line img {
+  width: 250px;
+  max-width: 80vw;
+}
+
+@media (max-width: 1024px) {
+  .black {
+  font-size: 22px;
+  padding: 15px;
+  }
+  .instagram img, .line img {
+  width: 250px;
+}
+  }
+  
+ /* スマホ対応 */
+@media (max-width: 599px) {
+  .black {
+  font-size: 20px;
+  padding: 10px;
+  }
+.instagram img, .line img {
+  width: 220px;
+}
+}
+/* タブレットサイズ（600px〜768px） */
+@media (min-width: 600px) and (max-width: 768px) {
+  .black {
+    font-size: 24px;
+    padding: 15px;
+  }
+ .instagram img, .line img {
+  width: 240px;
+}
+}
